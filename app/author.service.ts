@@ -1,6 +1,6 @@
 
 export class AuthorService {
   getAuthors() : string[] {
-    return ["Yates", "Hawthorne", "King"];
+    return ["Yates", "Hawthorne", "McIlroy"];
   }
 }

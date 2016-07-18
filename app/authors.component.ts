@@ -4,7 +4,7 @@ import {AuthorService} from './author.service';
 //All decorators need to be prefixed w/@
 //This function takes an object {}
 @Component({
-  selector: 'authors',//<authors> element
+  selector: 'authors',//<courses> element
   template: `<h2>Authors</h2>
             {{ title }}
             <ul>
@@ -13,13 +13,13 @@ import {AuthorService} from './author.service';
               </li>
             </ul>
             `,
-  providers: [AuthorService]
+  providers: [AuthorService]//Inject AuthorService into this component
 })
 export class AuthorsComponent {
-  title = "The title of the authors page";
+  title = "The title of authors page";
   authors;
 
-  constructor (authorService: AuthorService) {//pascal case
+  constructor (authorService: AuthorService) {//courseService is of type CourseService (typescript syntax)
     this.authors = authorService.getAuthors();
   }
 }
